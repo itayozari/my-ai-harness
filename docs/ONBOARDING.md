@@ -11,7 +11,7 @@ Take the user from fresh clone to "ready to work" in five minutes. Capture the p
 - **Explain through how it works, not abstractions.** No five-part-model lecture upfront — show it via the loop they'll actually use.
 - **Don't push for a goal.** The first task they give will be the goal.
 - **Generate the minimum.** A starting `CLAUDE.md`, an empty `STATE.md`, and any docs from Q3 if the user shared something. That's it.
-- **Don't introduce agents during onboarding.** They're an advanced layer most users won't need at first. Skills first; agents emerge later when needed.
+- **Mention agents only as a future possibility, in one line.** They're an advanced, optional layer most users won't need at first. Don't go deep — one sentence in the closing explanation is enough.
 
 ## The flow
 
@@ -52,16 +52,20 @@ What got written:
 
 If the user wants to see what was written, they ask. Don't volunteer a file dump.
 
-### Explain how the harness runs
-Three short paragraphs. The loop, not the theory.
+### Explain the harness, then how it runs
+One short framing line (what this is — like the README opener), then the loop. Keep the whole thing brief — under ~10 lines of dialogue total.
 
-> *"How this runs:*
+> *"Quick framing: this is a personal harness for your AI — it accumulates context, skills, tools, and outputs around your project. Gets sharper over time because the harness fills up, not because the model changed.*
 >
-> *— You give me a task. We do it. That's the default.*
+> *How it runs:*
 >
-> *— If it's something you'll repeat or care about doing well consistently, flag it: 'this is going to be a skill.' I'll work deliberately — building any tools we need, structuring the output cleanly, noting decisions — and at the end wrap it as a skill you can rerun later. Skills are reusable processes; the harness fills up that way.*
+> *— You give me a task. We do it.*
 >
-> *— At the end of every session, we check what's worth adding to our shared knowledge — anything we learned, decided, or that became standing context. Just say 'should we update context?' when you're wrapping up — anything new gets recorded."*
+> *— If you'll repeat it or want it done consistently well, flag it: 'this is going to be a skill.' I'll wrap it as a skill at the end. Once built, you invoke it with `/<skill-name>` — all your skills live in `QUICKSTART.md` so you can see what's available.*
+>
+> *— As skills accumulate, you can also build agents — optional orchestrations that combine multiple skills into one task. Most projects never need them; mention if you ever want one.*
+>
+> *— Session end: just say 'should we update context?' — anything worth keeping gets recorded."*
 
 ### Hand off
 > *"Ready when you are. What do you want to do?"*
