@@ -1,5 +1,5 @@
 <!-- This file must stay under 80 lines. If it grows, prune or move content to docs/. -->
-# agent-hq — Current State
+# my-ai-harness — Current State
 Last updated: <YYYY-MM-DD>
 
 ## Project Summary

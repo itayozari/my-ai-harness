@@ -1,6 +1,5 @@
 <!--
-Skill template. A skill defines a specialized agent — one slice of the project's
-work, with its own purpose, principles, and process.
+Skill template. A skill is a reusable process for a kind of work that repeats.
 
 Copy this folder to `skills/<your-skill-name>/`, fill it in based on the work
 that just happened (or that is about to happen when the user has flagged a task
@@ -11,9 +10,8 @@ Delete every <placeholder> and every <!-- comment block --> before saving.
 # <Skill Name>
 
 ## Purpose
-<One paragraph. What this specialized agent does. What "done" looks like. Be
-concrete enough that the operating presence reading this knows whether to load
-this skill for a given task.>
+<One paragraph. What this skill does. What "done" looks like. Be concrete enough
+that the AI reading this knows whether to load this skill for a given task.>
 
 ## When to Use
 <The trigger. Be specific so the agent picks the right skill in future sessions

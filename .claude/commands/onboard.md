@@ -1,5 +1,5 @@
 Read `docs/ONBOARDING.md` and run the onboarding flow defined there.
 
-Sequence the questions one at a time. Generate only `CLAUDE.md` and `STATE.md` — no other files. Show each proposed file in chat, get explicit approval, then write.
+Sequence the three questions one at a time. Generate only the master definitions in `CLAUDE.md` and `STATE.md` — no other files. Don't lead with file names; give a one-line confirmation after writing.
 
-End with a brief teach-back on the four-layer model and the "should we update context?" habit, and hand off by asking what the user wants to start with.
+End with a brief explanation of how the harness runs (you give a task → we do it; flag it as a skill if reusable; "should we update context?" at session end) and hand off by asking what the user wants to do.

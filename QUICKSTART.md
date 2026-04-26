@@ -1,29 +1,31 @@
-# agent-hq — Quick Start
+# my-ai-harness — Quick Start
 
-Your day-to-day reference for using this HQ. Updated whenever a new specialized agent (skill) is added.
+Your day-to-day reference for using this harness. Updated whenever a new skill or agent is added.
 
-## Open the HQ
+## Open the harness
 
 ```
 cd <path-to-this-repo>
 claude
 ```
 
+(Currently wired for Claude Code. Adapt the open command if you're using a different tool.)
+
 ## Slash Commands
 
 | Command | What it does |
 |---------|-------------|
-| `/onboard` | First-time setup. Captures the project, your communication style, and any existing knowledge you want to seed. |
+| `/onboard` | First-time setup. Captures the project, communication style, and any existing knowledge you want to seed. |
 
-<!-- New skills get a row here automatically when they're built. -->
+<!-- New skills and agents get a row here when they're built. -->
 
 ## Common Prompts (no command needed)
 
 | What you want | Just say |
 |--------------|---------|
 | Start working on something new | "let's work on \<thing\>" |
-| Make the work into a reusable agent | "this is going to be a skill — \<thing\>" before starting |
-| Update the HQ's knowledge | "should we update context?" (usually at session end) |
+| Make the work into a reusable skill | "this is going to be a skill — \<thing\>" before starting |
+| Update the harness's knowledge | "should we update context?" (usually at session end) |
 | Review what's recorded about the project | "show me what's in CLAUDE.md / STATE.md / docs/" |
 | Find a past output | "what's in workspace/?" or "find the \<topic\> output" |
 
@@ -31,20 +33,25 @@ claude
 
 | File | What it is |
 |------|-----------|
-| `CLAUDE.md` | The HQ's spine. Project, communication style, skill index. |
+| `CLAUDE.md` | The harness's spine. Project, communication style, skill index, agent index. |
 | `STATE.md` | Where the project stands right now. Read every session. |
-| `docs/META.md` | The manifesto: four-layer model, principles. |
+| `docs/META.md` | The manifesto: parts of the harness, principles. |
 | `docs/CONTEXT-PROTOCOL.md` | How knowledge gets updated. Loaded on demand. |
-| `docs/BUILDING.md` | How new skills and tools get built from real work. |
-| `skills/` | Your specialized agents. Each one handles a slice of the work. |
-| `tools/INDEX.md` | Runtime registry of code/integrations skills can use. |
+| `docs/BUILDING.md` | How new skills, agents, and tools get built from real work. |
+| `skills/` | Your reusable processes. |
+| `agents/` | *(optional)* Your orchestrations that combine multiple skills. |
+| `tools/INDEX.md` | Runtime registry of code/integrations skills and agents can use. |
 | `workspace/` | All work product. Organized by domain. |
 
-## Adding a New Specialized Agent (Skill)
+## Adding a New Skill
 
-You don't pre-build them. You do the work first, flagged as future skill, and the system captures it. See `docs/BUILDING.md` for the flow.
+You don't pre-build them. You do the work first, flagged as future skill, and the harness captures it. See `docs/BUILDING.md` for the flow.
 
 In short:
-1. Tell the agent: *"this is going to be a skill — \<task\>"*
-2. The agent does the work deliberately — building tools, structuring the workspace, noting decisions
-3. At the end, the work is captured into `skills/<name>/`, registered in `CLAUDE.md` → Skill Index, and a `/<name>` slash command is added here
+1. Tell the AI: *"this is going to be a skill — \<task\>"*
+2. The AI does the work deliberately — building tools, structuring the workspace, noting decisions.
+3. At the end, the work is captured into `skills/<name>/`, registered in `CLAUDE.md` → Skill Index, and a `/<name>` slash command is added here.
+
+## Adding a New Agent (Optional)
+
+Build an agent only when work needs to coordinate multiple skills as a single orchestrated task. If a skill alone covers it, build the skill. See `docs/BUILDING.md` → "Building an agent".

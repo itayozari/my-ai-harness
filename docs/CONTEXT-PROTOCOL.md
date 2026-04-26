@@ -1,6 +1,6 @@
 # Context Update Protocol
 
-Loaded only when the user asks "should we update context?". Not part of the always-loaded spine — kept here so the agent's attention stays on the work itself, and update logic loads precisely when it's needed.
+Loaded only when the user asks "should we update context?". Not part of the always-loaded spine — kept here so the AI's attention stays on the work itself, and update logic loads precisely when it's needed.
 
 ## When to evaluate
 
@@ -9,8 +9,9 @@ Loaded only when the user asks "should we update context?". Not part of the alwa
 | Current focus changed | Update `STATE.md` → Current Focus |
 | Status of a system/area changed (shipped, broke, in progress) | Update `STATE.md` → System Status |
 | Architectural or strategic decision made | Update the relevant `docs/` file (or create one if the domain just emerged) |
-| New skill (specialized agent) was created | Update `CLAUDE.md` → Skill Index, add a row to `QUICKSTART.md` → Slash Commands, ensure a `/<skill-name>` slash command exists in `.claude/commands/` |
-| New tool was created | Update `tools/INDEX.md` (skills don't need updating — they discover at runtime) |
+| New skill was created | Update `CLAUDE.md` → Skill Index, add a row to `QUICKSTART.md` → Slash Commands, ensure a `/<skill-name>` slash command exists in `.claude/commands/` |
+| New agent was created | Update `CLAUDE.md` → Agent Index, add a row to `QUICKSTART.md` → Slash Commands (if a slash command was created), ensure the agent definition lives at `agents/<name>/AGENT.md` |
+| New tool was created | Update `tools/INDEX.md` (skills and agents don't need updating — they discover at runtime) |
 | Knowledge about user or domain deepened | Update `docs/PROFILE.md` or `docs/DOMAIN.md` (create from template if first time) |
 | Info in `STATE.md` is now outdated | Remove it |
 | Domain became complex enough for its own file | Create `docs/<DOMAIN>.md` and add a pointer in `CLAUDE.md` |
@@ -54,4 +55,4 @@ Wait for explicit user approval before making any of the changes.
 
 - **User says "yes update everything"** → still propose the checklist first, get a confirm, then execute.
 - **You're unsure whether something rises to a context update** → ask. "I noticed X — worth recording, or one-off?"
-- **MEMORY.md or auto-memory holds something system-critical** → propose moving it to the appropriate `docs/` file. Auto-memory is the agent's notebook, not curated context.
+- **MEMORY.md or auto-memory holds something system-critical** → propose moving it to the appropriate `docs/` file. Auto-memory is the AI's notebook, not curated context.
